@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Bab!</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background: radial-gradient(circle at top, #002B5B, #001845);
       font-family: 'Quicksand', sans-serif;
       color: #ffffff;
@@ -16,9 +20,9 @@
     }
 
     h1 {
-      margin-top: 40px;
+      margin: 20px 10px;
       font-family: 'Great Vibes', cursive;
-      font-size: 4em;
+      font-size: 8vw;
       color: #7ec8e3;
       text-shadow: 0 0 10px #00d9ff, 0 0 20px #00bfff;
       animation: glow 2s ease-in-out infinite alternate;
@@ -34,9 +38,11 @@
     }
 
     .photo-container {
-      margin: 30px auto;
-      width: 220px;
-      height: 220px;
+      margin: 20px auto;
+      width: 60vw;
+      max-width: 240px;
+      height: 60vw;
+      max-height: 240px;
       border-radius: 50%;
       overflow: hidden;
       border: 6px solid #33ccff;
@@ -57,9 +63,9 @@
     }
 
     p {
-      font-size: 1.3em;
+      font-size: 1.2em;
+      padding: 0 15px;
       color: #e0f7ff;
-      margin-top: 10px;
       animation: fadeIn 2s ease-in;
     }
 
@@ -71,12 +77,11 @@
     .balloon {
       position: absolute;
       bottom: -120px;
-      width: 60px;
-      height: 80px;
-      background-color: rgba(255,255,255,0.2);
+      width: 40px;
+      height: 60px;
       border-radius: 50%;
-      animation: floatUp 7s infinite ease-in;
       opacity: 0.8;
+      animation: floatUp 7s infinite ease-in;
       box-shadow: 0 0 10px #00bfff;
     }
 
@@ -94,24 +99,40 @@
       }
     }
 
-    /* Position balloons randomly */
+    /* Balloons position */
     .balloon:nth-child(4) { left: 10%; background: #3399ff; animation-delay: 0s; }
     .balloon:nth-child(5) { left: 25%; background: #66ccff; animation-delay: 1s; }
     .balloon:nth-child(6) { left: 45%; background: #00bfff; animation-delay: 2s; }
     .balloon:nth-child(7) { left: 65%; background: #3399cc; animation-delay: 3s; }
     .balloon:nth-child(8) { left: 80%; background: #33ccff; animation-delay: 4s; }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 10vw;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .photo-container {
+        width: 70vw;
+        height: 70vw;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>🎂 Happy Birthday Bab! 🎉</h1>
 
   <div class="photo-container">
-    <img src="bab.png"alt="Bab's Picture">
+    <img src="bab.png" alt="Bab's Picture">
   </div>
 
   <p>May your day be as lovely, bright, and unforgettable as you. 💙</p>
 
-  <h1>Mabuhay ka hanggat gusto !</h1>
+  <h1>Mabuhay ka hanggat gusto!</h1>
+
   <!-- Floating Balloons -->
   <div class="balloon"></div>
   <div class="balloon"></div>
